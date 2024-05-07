@@ -1,0 +1,37 @@
+<!-- <p>login works!</p> -->
+<!-- <p>register works!</p> -->
+<div class="container">
+    <div class="card">
+        <h1>Login Form</h1>
+        <form #myLogin="ngForm" (ngSubmit)="doLogin(myLogin.value)">
+
+            <p>
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>Email</mat-label>
+                    <input type="email" name="email" [(ngModel)]="data.email" matInput placeholder="Enter Email">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>Password</mat-label>
+                    <input type="password" name="password" [(ngModel)]="data.password" matInput
+                        placeholder="Enter Password">
+                </mat-form-field>
+            </p>
+            <script>
+                function display()
+                {
+                    document.write("login succesfully")
+                }
+            </script>
+
+            <div class="send">
+                <button type="submit" mat-raised-button style="background-color: blue; height: 35px;" onclick="display()">Login</button>
+                <button type="reset" mat-raised-button
+                    style="background-color: palevioletred; height: 35px;">Reset</button>
+                    
+
+            </div>
+        </form>
+    </div>
+</div>
